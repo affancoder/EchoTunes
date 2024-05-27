@@ -1,0 +1,11 @@
+Full_stack_Music_web_Player/
+├── views/
+│   └── index.ejs
+├── public/
+│   ├── assests/
+│   │   └── logo.png
+│   ├── style.css
+│   └── script.js
+├── app.js
+├── package.json
+└── package-lock.json

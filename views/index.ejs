@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoTunes</title>
+  <link rel="stylesheet" href="/style.css" />
+  <!-- <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/social-media-and-logos-11/32/Logo_Spotify-512.png" class="rel"> -->
+  <link rel="shortcut icon" href="/assests/logo.png" type="image/x-icon">
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav>
+    <ul>
+      <li class="brand"><img src="/assests/logo.png" alt="spotify" />Music Play</li>
+      <button class="loginsty"><a href="/login">Login</a></button>
+    </ul>
+  </nav>
+  <!-- Navbar End -->
+  <div>
+    <div class="container">
+      <div class="songList">
+        <h1>Best of NCS - No copyright sounds</h1>
+        <br>
+        <div>
+          <% const songs = [
+            { id: 0, name: 'Let me love you', timestamp: '05:34' },
+            { id: 1, name: 'Let me love you', timestamp: '04:21' },
+            { id: 2, name: 'Let me love you', timestamp: '04:14' },
+            { id: 3, name: 'Let me love you', timestamp: '03:39' },
+            { id: 4, name: 'Let me love you', timestamp: '06:34' }
+          ]; %>
+          <% songs.forEach(song => { %>
+            <div class="songItem">
+              <img alt="1" width="89px" />
+              <span class="songName"><%= song.name %></span>
+              <span class="songListplay">
+                <span class="timestamp"><%= song.timestamp %> <i id="<%= song.id %>" class="far songItemPlay fa-play-circle"></i></span>
+              </span>
+            </div>
+          <% }); %>
+        </div>
+        <div class="songBanner"></div>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="container" style="background-image: url('https://hookagency.com/wp-content/uploads/2018/05/gradient-background.jpeg'); background-size: cover;">
+        <div class="songList">
+          <h1>Best of Punjabi Hits - Dill Se Punjabi</h1>
+          <br>
+          <% songs.forEach(song => { %>
+            <div class="songItem">
+              <img alt="1" width="89px" />
+              <span class="songName"><%= song.name %></span>
+              <span class="songListplay">
+                <span class="timestamp"><%= song.timestamp %> <i id="<%= song.id %>" class="far songItemPlay fa-play-circle"></i></span>
+              </span>
+            </div>
+          <% }); %>
+        </div>
+        <div class="songBanner"></div>
+      </div>
+    </div>
+
+    <div class="container3">
+      <div class="container" style="background-image: url('https://t4.ftcdn.net/jpg/01/90/74/63/360_F_190746317_qjZikoohn97kiJrWpJZJLHilBXKVWTAD.jpg'); background-size: cover;">
+        <div class="songList">
+          <h1>Best of Bollywood Hits - Love Songs</h1>
+          <br>
+          <% songs.forEach(song => { %>
+            <div class="songItem">
+              <img alt="1" width="89px" />
+              <span class="songName"><%= song.name %></span>
+              <span class="songListplay">
+                <span class="timestamp"><%= song.timestamp %> <i id="<%= song.id %>" class="far songItemPlay fa-play-circle"></i></span>
+              </span>
+            </div>
+          <% }); %>
+        </div>
+        <div class="songBanner"></div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100" />
+      <div class="icons">
+        <i class="fa-solid fa-3x fa-step-backward" id="previous"></i>
+        <i class="fa-solid fa-3x fa-play-circle" id="masterPlay"></i>
+        <i class="fa-solid fa-3x fa-step-forward" id="next"></i>
+      </div>
+      <div class="songInfo">
+        <img src="/assests/playing.gif" width="42px" alt="" id="gif" /><span id="masterSongName"></span>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/033520b209.js" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
