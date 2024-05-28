@@ -1,3 +1,3 @@
 # EchoTunes
 
-this is not complete , developement going on. 
+this is not complete , development going on. 
